@@ -1,0 +1,61 @@
+{
+  "app_name": "Thread Reference",
+  "domain": "Machinist Tool / Precision Engineering",
+  "theme": "Dark Theme (Shop Floor Optimized)",
+  "archetype": "Archetype 4 (Swiss & High-Contrast) + Archetype 2 (Performance Pro)",
+  "design_philosophy": "Rugged, technical, no-nonsense precision. Optimized for shop floor environments with harsh lighting, dirty environments, and gloved hands. Emulates the interface of digital calipers (Mitutoyo) and modern CNC command centers.",
+  "colors": {
+    "background": "#0A0A0A",
+    "surface": "#171717",
+    "surface_elevated": "#262626",
+    "border": "rgba(255, 255, 255, 0.12)",
+    "primary": "#FFB000",
+    "primary_hover": "#E59E00",
+    "text_primary": "#F3F4F6",
+    "text_secondary": "#9CA3AF",
+    "success": "#00E676",
+    "danger": "#FF3B30"
+  },
+  "typography": {
+    "font_family_ui": "IBM Plex Sans, sans-serif",
+    "font_family_mono": "Roboto Mono, JetBrains Mono, monospace",
+    "rules": [
+      "CRITICAL: All numerical specifications, dimensions, thread sizes, and wire measurements MUST use 'font-mono' and 'tabular-nums' for precise vertical alignment and scanning.",
+      "Headings should be bold and tracking-tight.",
+      "Do NOT use generic consumer fonts like Inter for main headings. Use a technical geometric sans.",
+      "Avoid ultra-thin weights. Shop floor readability requires medium to bold weights."
+    ],
+    "scales": {
+      "h1": "text-4xl font-bold tracking-tight text-[#F3F4F6]",
+      "h2": "text-2xl font-bold tracking-tight text-[#F3F4F6]",
+      "h3": "text-xl font-semibold text-[#F3F4F6]",
+      "body": "text-base font-medium text-[#F3F4F6]",
+      "specs": "text-lg font-mono tabular-nums text-[#FFB000]",
+      "label": "text-sm font-bold tracking-[0.15em] uppercase text-[#9CA3AF]"
+    }
+  },
+  "spacing_and_layout": {
+    "padding_scale": "p-4 for compact areas, p-6 for standard containers.",
+    "tap_targets": "CRITICAL: Minimum tap target size must be h-14 (56px) or h-16 (64px) to accommodate machinists wearing gloves. Spacing between interactive elements must be generous.",
+    "grid_system": "Bento-style grids for spec layouts. Use gap-4 between data points for high density but clear separation.",
+    "corner_radius": "rounded-sm or rounded-md (4px-6px). Do NOT use large rounded corners (rounded-xl/2xl) as they feel like consumer toys, not precision industrial tools."
+  },
+  "components": {
+    "cards": "Flat background (bg-[#171717]), 1px solid border (border-[#ffffff1a]), NO drop shadows. Technical UI favors stark lines over soft elevations.",
+    "buttons": "Primary actions: bg-[#FFB000] text-black font-bold uppercase tracking-wide. Large hit areas (min-h-[56px]).",
+    "segmented_controls": "Use for Unified vs Metric and Internal vs External. bg-[#171717] with active state bg-[#262626] and a 2px bottom border of #FFB000.",
+    "inputs": "Search bars and 3-wire inputs: bg-[#0A0A0A] border border-[#ffffff1a] focus:border-[#FFB000] text-lg font-mono. Large height (h-14).",
+    "tables_lists": "Thread lists must be dense enough to scan but spaced enough to tap (h-16 per row). Use border-b border-[#ffffff1a] for separators."
+  },
+  "iconography": {
+    "library": "lucide-react-native",
+    "style": "Use technical, geometric icons with 2px or 2.5px stroke width for maximum visibility.",
+    "instructions": "Use standard clear icons. Search (magnifying glass), Settings (cog), Back (chevron-left)."
+  },
+  "development_rules": {
+    "file_extensions": "Use .js extensions for all component and screen files.",
+    "testing": "CRITICAL: All interactive elements (buttons, inputs, list items, toggles, selectors) MUST include a `data-testid` attribute using kebab-case role-based naming (e.g., `data-testid=\"thread-list-item-1/4-20\"`, `data-testid=\"system-toggle-metric\"`, `data-testid=\"search-input\"`).",
+    "styling_engine": "Tailwind CSS via NativeWind for React Native. Translate web CSS patterns to React Native compatible Tailwind classes (e.g., avoid `backdrop-blur` or unsupported CSS properties, rely on solid backgrounds).",
+    "platform_specifics": "Ensure safe area insets are respected for top header and bottom sections."
+  }
+}
