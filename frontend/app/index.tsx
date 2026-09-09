@@ -94,10 +94,6 @@ export default function Home() {
           ))}
         </View>
       </ScrollView>
-
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>OFFLINE · NO ACCOUNT REQUIRED</Text>
-      </View>
     </SafeAreaView>
   );
 }
@@ -150,7 +146,5 @@ function makeStyles(c: AppColors) {
       paddingVertical: 14, alignItems: 'center', gap: 6,
     },
     featLabel: { color: c.muted, fontSize: 11, fontWeight: '700', letterSpacing: 1.2 },
-    footer: { paddingVertical: 12, alignItems: 'center' },
-    footerText: { color: c.dim, fontSize: 11, letterSpacing: 1.5, fontWeight: '600' },
   });
 }
